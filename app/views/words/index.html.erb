@@ -2,23 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-      <h1>Lista de Anagramas</h1>
+      <h1>Sua Lista de Anagramas </h1>
+     
 
-      
-          <div class="row">
-            <div class="col-md-4" ><h4>Palavra 1</h4></div>
-            <div class="col-md-4" ><h4>Palavra 2</h4></div>
-          </div>
-        
-
-         <div class="row">
-          <% @words.each do |word| %>    
+       <div class="row">
+           <% @words.each do |word| %>   
+              <h1>Anagrama</h1> 
               <div class="col-md-4"><%= word.word1 %></div>
+              
               <div class="col-md-4"><%= word.word2 %></div>
-              <div class="col-md-4"><%= link_to 'Destroy' , word, method: :delete, data: { confirm: 'Deletar anagrama?' } %></div>
-          <% end %>
-        </div>
-      
+              <div class="col-md-4"><%= link_to 'Editar' , word, method: :delete, data: { confirm: 'Deletar anagrama?' } %></div>
+          <% end %> 
+            
+          </div>
 
       <br>
       <button type="button" class="btn btn-default"><%= link_to 'Nova verificação', new_word_path %></button>
